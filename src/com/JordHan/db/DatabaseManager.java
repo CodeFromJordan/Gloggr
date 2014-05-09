@@ -1,7 +1,3 @@
-// Author: Jordan Hancock
-// Name: DatabaseManager.java
-// Last Modified: 18/02/2014
-// Purpose: Singleton class used for database access.
 package com.JordHan.db;
 
 import android.content.Context;

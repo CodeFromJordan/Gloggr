@@ -1,7 +1,3 @@
-// Author: Jordan Hancock
-// Name: DatabaseHelper.java
-// Last Modified: 18/02/2014
-// Purpose: Class used to map from database to object.
 package com.JordHan.db;
 
 import android.content.Context;
