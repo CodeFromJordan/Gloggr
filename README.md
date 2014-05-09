@@ -1,4 +1,4 @@
 Gloggr
 ======
 
-Android app with the aim of helping you to manage and organise your video game backlog.
+Android app to assist with managing and organising your video game backlog.
