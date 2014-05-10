@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.JordHan.Gloggr.Helper.MenuHelper;
 import com.JordHan.db.DatabaseManager;
 
 public class MainActivity extends Activity {
@@ -30,25 +30,14 @@ public class MainActivity extends Activity {
     // When item in menu selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent activityToSwitchTo = new Intent();
-
-        switch(item.getItemId()) {
-        case R.id.itemMainActivity:
-            activityToSwitchTo = new Intent(getBaseContext(), MainActivity.class);
-            startActivity(activityToSwitchTo);
-        	break;
-        case R.id.itemCurrentlyPlayingActivity:
-            Toast.makeText(getApplicationContext(), "Currently Playing", Toast.LENGTH_SHORT).show();
-        	break;
-        case R.id.itemgameListActivity:
-        	Toast.makeText(getApplicationContext(), "Game List", Toast.LENGTH_SHORT).show();
-        	break;
-        default:
-        	Toast.makeText(getApplicationContext(), "Error opening activity", Toast.LENGTH_SHORT).show();
-        	return false;
-        }
-        
-        //startActivity(activityToSwitchTo);
-        return true;
+    	// Call MenuHelper class to operate on menu item clicked, get an intent back
+    	Intent activityToOpen = MenuHelper.performMenuOperation(item, getBaseContext(), getApplicationContext());
+    	
+    	if(activityToOpen != null) { // If Intent to an activity returned
+    		startActivity(activityToOpen); // Open it
+    		return true;
+    	}
+    	
+    	return false; // Else return that there was an error
     }
 }
