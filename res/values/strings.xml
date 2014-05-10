@@ -1,5 +1,10 @@
 <resources>
 
+    <!-- Whole App -->
     <string name="app_name">Gloggr</string>
+    
+    <!-- Home Activity -->
+    <string name="profilePictureContentDescription">Profile Picture</string>
+    <string name="profileWelcomeMessage">Welcome back to Gloggr!</string>
 
 </resources>
