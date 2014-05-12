@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.JordHan.Gloggr.Helper.MenuHelper;
-import com.JordHan.db.DatabaseManager;
+import com.JordHan.Gloggr.db.DatabaseManager;
 
 public class MainActivity extends Activity {
 
