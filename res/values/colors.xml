@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Branding -->
+    <color name="EarthWaterBlue">#99CCFF</color>
+    <color name="EarthLandGreen">#99FF99</color>
+    
+    <!-- Control -->
+    <color name="White">#FFFFFF</color>
+    <color name="LightGrey">#DDDDDD</color>
+</resources>

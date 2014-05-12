@@ -5,6 +5,6 @@
     
     <!-- Home Activity -->
     <string name="profilePictureContentDescription">Profile Picture</string>
-    <string name="profileWelcomeMessage">Welcome back to Gloggr!</string>
+    <string name="profileWelcomeMessage">[Username]\'s Gloggr</string>
 
 </resources>
