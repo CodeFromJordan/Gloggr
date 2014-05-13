@@ -2,34 +2,303 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
-    
+    android:orientation="vertical" >
+
     <!-- Image Box -->
-    <LinearLayout 
-        android:orientation="vertical"
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
         <ImageView
             android:id="@+id/imgProfilePicture"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="fitXY"
             android:contentDescription="@string/profilePictureContentDescription"
+            android:scaleType="fitXY"
             android:src="@drawable/default_header" />
     </LinearLayout>
-    
+
     <!-- Main Content Box -->
-    <LinearLayout 
-        android:orientation="vertical"
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
-        <TextView 
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <!-- Welcome message -->
+
+        <TextView
+            android:id="@+id/txtProfileWelcomeMessage"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/profileWelcomeMessage"
             android:textSize="27sp" />
+
+        <!-- GAMES BY COMPLETION STATUS -->
+
+        <TableRow
+            android:id="@+id/troCompletionHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/EarthWaterBlue" >
+
+            <TextView
+                android:id="@+id/txtCompletionHeader"
+                android:gravity="center"
+                android:text="@string/profileCompletionTableHeader"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/TableGrey"
+            android:orientation="vertical" >
+
+            <!-- Gold Prize (Completed) -->
+
+            <TableRow
+                android:id="@+id/troCompletionGold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <!-- Prize Image -->
+
+                <ImageView
+                    android:id="@+id/imgPrizeGold"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/profileGoldContentDescription"
+                    android:src="@drawable/prize_gold" />
+
+                <!-- Statistics Text -->
+
+                <TextView
+                    android:id="@+id/txtPrizeGoldStats"
+                    android:layout_weight="1"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/prgCompletionBarGold"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20" />
+            </TableRow>
+
+            <!-- Silver Prize (Beaten) -->
+
+            <TableRow
+                android:id="@+id/troCompletionSilver"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <!-- Prize Image -->
+
+                <ImageView
+                    android:id="@+id/imgPrizeSilver"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/profileGoldContentDescription"
+                    android:src="@drawable/prize_silver" />
+
+                <!-- Statistics Text -->
+
+                <TextView
+                    android:id="@+id/txtPrizeSilverStats"
+                    android:layout_weight="1"
+                    android:text="16"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/prgCompletionBarSilver"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20" />
+            </TableRow>
+
+            <!-- Bronze Prize (Unbeaten) -->
+
+            <TableRow
+                android:id="@+id/troCompletionBronze"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <!-- Prize Image -->
+
+                <ImageView
+                    android:id="@+id/imgPrizeBronze"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/profileBronzeContentDescription"
+                    android:src="@drawable/prize_bronze" />
+
+                <!-- Statistics Text -->
+
+                <TextView
+                    android:id="@+id/txtPrizeBronzeStats"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/prgCompletionBarBronze"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20" />
+            </TableRow>
+
+            <!-- Red Prize (On Hold) -->
+
+            <TableRow
+                android:id="@+id/troCompletionRed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <!-- Prize Image -->
+
+                <ImageView
+                    android:id="@+id/imgPrizeRed"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/profileRedContentDescription"
+                    android:src="@drawable/prize_red" />
+
+                <!-- Statistics Text -->
+
+                <TextView
+                    android:id="@+id/txtPrizeRedStats"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/prgCompletionBarRed"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20" />
+            </TableRow>
+        </TableLayout>
+
+        <TableRow
+            android:id="@+id/troRatingsHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/EarthWaterBlue" >
+
+            <TextView
+                android:id="@+id/txtRatingHeader"
+                android:gravity="center"
+                android:text="@string/profileRatingTableHeader"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/TableGrey"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/troRatings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <!-- Gold Rated -->
+
+                <ImageView
+                    android:id="@+id/imgRatingGold"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:contentDescription="@string/profileGoldContentDescription"
+                    android:src="@drawable/star_gold" />
+
+                <TextView
+                    android:id="@+id/txtGoldRating"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <!-- Silver Rated -->
+
+                <ImageView
+                    android:id="@+id/imgRatingSilver"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:contentDescription="@string/profileSilverContentDescription"
+                    android:src="@drawable/star_silver" />
+
+                <TextView
+                    android:id="@+id/txtSilverRating"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <!-- Bronze Rated -->
+
+                <ImageView
+                    android:id="@+id/imgRatingBronze"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:contentDescription="@string/profileBronzeContentDescription"
+                    android:src="@drawable/star_bronze" />
+
+                <TextView
+                    android:id="@+id/txtBronzeRating"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <!-- Red Rated -->
+
+                <ImageView
+                    android:id="@+id/imgRatingRed"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:contentDescription="@string/profileRedContentDescription"
+                    android:src="@drawable/star_red" />
+
+                <TextView
+                    android:id="@+id/txtRedRating"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
     </LinearLayout>
+
 </LinearLayout>

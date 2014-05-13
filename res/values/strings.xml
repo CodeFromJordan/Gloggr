@@ -1,10 +1,20 @@
 <resources>
 
+    <!-- Test Date -->
+    <string name="username">Jordan</string>
+    
     <!-- Whole App -->
     <string name="app_name">Gloggr</string>
     
     <!-- Home Activity -->
     <string name="profilePictureContentDescription">Profile Picture</string>
-    <string name="profileWelcomeMessage">[Username]\'s Gloggr</string>
+    <string name="profileWelcomeMessage">\'s Game Statistics</string>
+    
+    <string name="profileRatingTableHeader">Games by Rating</string>
+    <string name="profileGoldContentDescription">Gold</string>
+    <string name="profileSilverContentDescription">Silver</string>
+    <string name="profileBronzeContentDescription">Bronze</string>
+    <string name="profileRedContentDescription">Red</string>
+    <string name="profileCompletionTableHeader">Games by Completion Status</string>
 
 </resources>

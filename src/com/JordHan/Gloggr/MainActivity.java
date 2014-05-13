@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.JordHan.Gloggr.Helper.MenuHelper;
@@ -21,8 +22,19 @@ public class MainActivity extends Activity {
 		
 		// Setup interface
 		setContentView(R.layout.main_activity); // Load interface
-		ImageView imgProfilePicture = (ImageView)findViewById(R.id.imgProfilePicture);
 		
+		// Get access to views
+		ImageView imgProfilePicture = (ImageView)findViewById(R.id.imgProfilePicture);
+		TextView txtWelcomeMessage = (TextView)findViewById(R.id.txtProfileWelcomeMessage);
+		
+		// Get values from resources
+		String username = getString(R.string.username);
+		String welcomeMessage = getString(R.string.profileWelcomeMessage);
+		
+		// Customise interface values
+		txtWelcomeMessage.setText("* " + username + welcomeMessage + " *");
+		
+		// Create listeners for controls
 		imgProfilePicture.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {

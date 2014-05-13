@@ -6,5 +6,6 @@
     
     <!-- Control -->
     <color name="White">#FFFFFF</color>
-    <color name="LightGrey">#DDDDDD</color>
+    <color name="Grey">#CCCCCC</color>
+    <color name="TableGrey">#DDDDDD</color>
 </resources>
