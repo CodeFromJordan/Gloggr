@@ -14,9 +14,9 @@
             android:id="@+id/imgProfilePicture"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="center"
+            android:scaleType="fitXY"
             android:contentDescription="@string/profilePictureContentDescription"
-            android:src="@drawable/ff7" />
+            android:src="@drawable/default_header" />
     </LinearLayout>
     
     <!-- Main Content Box -->
