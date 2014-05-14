@@ -24,6 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Preferences activity -->
+        <activity
+            android:name=".PreferencesActivity"
+            android:launchMode="singleTop">
+        </activity>
     </application>
 
 </manifest>

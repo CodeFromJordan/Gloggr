@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.JordHan.Gloggr.MainActivity;
+import com.JordHan.Gloggr.PreferencesActivity;
 import com.JordHan.Gloggr.R;
 
 public class MenuHelper {
@@ -26,9 +27,8 @@ public class MenuHelper {
         	Toast.makeText(applicationContext, "Game List", Toast.LENGTH_SHORT).show();
         	activityToSwitchTo = null;
         	break;
-        case R.id.itemSettingsActivity:
-        	Toast.makeText(applicationContext, "Settings", Toast.LENGTH_SHORT).show();
-        	activityToSwitchTo = null;
+        case R.id.itemPreferencesActivity:
+        	activityToSwitchTo = new Intent(baseContext, PreferencesActivity.class);
         	break;
         default:
         	Toast.makeText(applicationContext, "Error opening activity", Toast.LENGTH_SHORT).show();

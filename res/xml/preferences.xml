@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:summary="Set up your user information"
+        android:title="User Information" >
+        <EditTextPreference
+            android:defaultValue="Current User"
+            android:key="first_name"
+            android:persistent="true"
+            android:summary="Enter the name you want Gloggr to use"
+            android:title="Name" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Set up application interface"
+        android:title="Interface" >
+        <Preference
+            android:key="header_image_uri"
+            android:summary="Select a header image to display on the home activity"
+            android:title="Header Image" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Find out about application and developer"
+        android:title="Application" >
+        <Preference android:title="About Developer" />
+        <Preference android:title="About App" />
+        <Preference android:title="Contact Details" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -11,7 +11,7 @@
         android:id="@+id/itemgameListActivity"
         android:title="Game List"/>
     <item
-        android:id="@+id/itemSettingsActivity"
-        android:title="Settings"/>
+        android:id="@+id/itemPreferencesActivity"
+        android:title="Preferences"/>
 
 </menu>
