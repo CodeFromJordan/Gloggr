@@ -97,7 +97,9 @@
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="20" />
+                    android:layout_weight="20"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/goldprogress" />
             </TableRow>
 
             <!-- Silver Prize (Beaten) -->
@@ -131,7 +133,9 @@
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="20" />
+                    android:layout_weight="20"
+                    android:progress="80"
+                    android:progressDrawable="@drawable/silverprogress" />
             </TableRow>
 
             <!-- Bronze Prize (Unbeaten) -->
@@ -165,7 +169,9 @@
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="20" />
+                    android:layout_weight="20"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/bronzeprogress" />
             </TableRow>
 
             <!-- Red Prize (On Hold) -->
@@ -199,9 +205,13 @@
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="20" />
+                    android:layout_weight="20"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/redprogress" />
             </TableRow>
         </TableLayout>
+
+        <!-- GAMES BY RATING STATUS -->
 
         <TableRow
             android:id="@+id/troRatingsHeader"
@@ -298,6 +308,34 @@
                     android:text="1"
                     android:textStyle="bold" />
             </TableRow>
+        </TableLayout>
+
+        <!-- GAMES BY SYSTEM -->
+
+        <TableRow
+            android:id="@+id/troSystemHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/EarthWaterBlue" >
+
+            <TextView
+                android:id="@+id/txtSystemHeader"
+                android:gravity="center"
+                android:text="@string/profileSystemTableHeader"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/TableGrey"
+            android:orientation="vertical" >
         </TableLayout>
     </LinearLayout>
 

@@ -16,5 +16,6 @@
     <string name="profileBronzeContentDescription">Bronze</string>
     <string name="profileRedContentDescription">Red</string>
     <string name="profileCompletionTableHeader">Games by Completion Status</string>
+    <string name="profileSystemTableHeader">Games by System</string>
 
 </resources>
