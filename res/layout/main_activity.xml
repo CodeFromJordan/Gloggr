@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/EarthWaterBlue" >
 
             <TextView
@@ -79,17 +79,17 @@
                 <ImageView
                     android:id="@+id/imgPrizeGold"
                     android:layout_width="32dp"
-                    android:layout_height="48dp"
+                    android:layout_height="32dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/profileGoldContentDescription"
-                    android:src="@drawable/prize_gold" />
+                    android:src="@drawable/medallion_gold" />
 
                 <!-- Statistics Text -->
 
                 <TextView
                     android:id="@+id/txtPrizeGoldStats"
                     android:layout_weight="1"
-                    android:text="2"
+                    android:text="2 (10%)"
                     android:textStyle="bold" />
 
                 <ProgressBar
@@ -115,17 +115,17 @@
                 <ImageView
                     android:id="@+id/imgPrizeSilver"
                     android:layout_width="32dp"
-                    android:layout_height="48dp"
+                    android:layout_height="32dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/profileGoldContentDescription"
-                    android:src="@drawable/prize_silver" />
+                    android:src="@drawable/medallion_silver" />
 
                 <!-- Statistics Text -->
 
                 <TextView
                     android:id="@+id/txtPrizeSilverStats"
                     android:layout_weight="1"
-                    android:text="16"
+                    android:text="16 (80%)"
                     android:textStyle="bold" />
 
                 <ProgressBar
@@ -151,17 +151,17 @@
                 <ImageView
                     android:id="@+id/imgPrizeBronze"
                     android:layout_width="32dp"
-                    android:layout_height="48dp"
+                    android:layout_height="32dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/profileBronzeContentDescription"
-                    android:src="@drawable/prize_bronze" />
+                    android:src="@drawable/medallion_bronze" />
 
                 <!-- Statistics Text -->
 
                 <TextView
                     android:id="@+id/txtPrizeBronzeStats"
                     android:layout_weight="1"
-                    android:text="1"
+                    android:text="1 (5%)"
                     android:textStyle="bold" />
 
                 <ProgressBar
@@ -187,17 +187,17 @@
                 <ImageView
                     android:id="@+id/imgPrizeRed"
                     android:layout_width="32dp"
-                    android:layout_height="48dp"
+                    android:layout_height="32dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/profileRedContentDescription"
-                    android:src="@drawable/prize_red" />
+                    android:src="@drawable/medallion_red" />
 
                 <!-- Statistics Text -->
 
                 <TextView
                     android:id="@+id/txtPrizeRedStats"
                     android:layout_weight="1"
-                    android:text="1"
+                    android:text="1 (5%)"
                     android:textStyle="bold" />
 
                 <ProgressBar

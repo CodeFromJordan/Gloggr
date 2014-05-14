@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- Branding -->
     <color name="EarthWaterBlue">#99CCFF</color>
     <color name="EarthLandGreen">#99FF99</color>
+
+    <!-- Progress Bar -->
+    <!-- Gold -->
+    <color name="LighterGold">#FFE680</color>
+    <color name="DarkerGold">#E6B800</color>
+    <!-- Silver -->
+    <color name="LighterSilver">#E6E6E6</color>
+    <color name="DarkerSilver">#AAAAAA</color>
+    <!-- Bronze -->
+    <color name="LighterBronze">#C2A385</color>
+    <color name="DarkerBronze">#9E846C</color>
+    <!-- Red -->
+    <color name="LighterRed">#FF6666</color>
+    <color name="DarkerRed">#E60000</color>
     
     <!-- Control -->
     <color name="White">#FFFFFF</color>
     <color name="Grey">#CCCCCC</color>
     <color name="TableGrey">#DDDDDD</color>
+
 </resources>
