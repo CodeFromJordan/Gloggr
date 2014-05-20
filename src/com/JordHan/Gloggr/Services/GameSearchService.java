@@ -13,6 +13,8 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.JordHan.Gloggr.R;
+
 public class GameSearchService extends AbstractService {
 
     private String query;
@@ -20,7 +22,8 @@ public class GameSearchService extends AbstractService {
 
     // Create instance of service
     public GameSearchService(String query) {
-        this.query = URLEncoder.encode(query);
+        //this.query = URLEncoder.encode(query);
+        this.query = query;
     }
 
     // Getters
@@ -30,8 +33,10 @@ public class GameSearchService extends AbstractService {
 
     // Main service, use HttpClient to download bytes and convert to JSONArray
     public void run() {
-        String api_key = "";
-        String url = "";
+        String api_key = "549850873039c81f04c7277ec35a913728e3cf65";
+        
+        String url = "http://www.giantbomb.com/api/search/?api_key=" + api_key + 
+        		"&format=json&query=\"" + query + "\"&resources=game";
 
         boolean error = false;
         HttpClient httpClient = null;
@@ -43,8 +48,7 @@ public class GameSearchService extends AbstractService {
             String result = EntityUtils.toString(entity, "UTF8");
 
             JSONObject json = new JSONObject(result);
-            json = json.getJSONObject("listings");
-            results = json.getJSONArray("listing");
+            results = json.getJSONArray("results");
 
             if (results.length() == 0) {
                 error = true;
