@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.JordHan.Gloggr.CurrentlyPlayingActivity;
+import com.JordHan.Gloggr.GameListActivity;
 import com.JordHan.Gloggr.MainActivity;
 import com.JordHan.Gloggr.PreferencesActivity;
 import com.JordHan.Gloggr.R;
@@ -20,12 +22,10 @@ public class MenuHelper {
             activityToSwitchTo = new Intent(baseContext, MainActivity.class);
         	break;
         case R.id.itemCurrentlyPlayingActivity:
-            Toast.makeText(applicationContext, "Currently Playing", Toast.LENGTH_SHORT).show();
-            activityToSwitchTo = null;
+        	activityToSwitchTo = new Intent(baseContext, CurrentlyPlayingActivity.class);
         	break;
-        case R.id.itemgameListActivity:
-        	Toast.makeText(applicationContext, "Game List", Toast.LENGTH_SHORT).show();
-        	activityToSwitchTo = null;
+        case R.id.itemGameListActivity:
+        	activityToSwitchTo = new Intent(baseContext, GameListActivity.class);
         	break;
         case R.id.itemPreferencesActivity:
         	activityToSwitchTo = new Intent(baseContext, PreferencesActivity.class);

@@ -20,8 +20,7 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState); // Push instance of activity to
-											// super
+		super.onCreate(savedInstanceState); // Push instance of activity to super
 
 		// Setup interface
 		setContentView(R.layout.main_activity); // Load interface

@@ -25,10 +25,22 @@
             </intent-filter>
         </activity>
 
+        <!-- Currently playing activity -->
+        <activity
+            android:name=".CurrentlyPlayingActivity"
+            android:launchMode="singleTop" >
+        </activity>
+
+        <!-- Game list activity -->
+        <activity
+            android:name=".GameListActivity"
+            android:launchMode="singleTop" >
+        </activity>
+
         <!-- Preferences activity -->
         <activity
             android:name=".PreferencesActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop" >
         </activity>
     </application>
 

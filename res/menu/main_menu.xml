@@ -8,7 +8,7 @@
         android:id="@+id/itemCurrentlyPlayingActivity"
         android:title="Currently Playing"/>
     <item
-        android:id="@+id/itemgameListActivity"
+        android:id="@+id/itemGameListActivity"
         android:title="Game List"/>
     <item
         android:id="@+id/itemPreferencesActivity"

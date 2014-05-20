@@ -5,6 +5,9 @@
     
     <!-- Whole App -->
     <string name="app_name">Gloggr</string>
+    <string name="currently_playing_title">Currently Playing</string>
+    <string name="game_list_title">Game List</string>
+    <string name="preferences_title">Preferences</string>
     
     <!-- Home Activity -->
     <string name="profilePictureContentDescription">Profile Picture</string>
