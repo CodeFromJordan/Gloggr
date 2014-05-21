@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.JordHan.Gloggr.CurrentlyPlayingActivity;
-import com.JordHan.Gloggr.GameListActivity;
-import com.JordHan.Gloggr.MainActivity;
-import com.JordHan.Gloggr.PreferencesActivity;
 import com.JordHan.Gloggr.R;
+import com.JordHan.Gloggr.Activities.CurrentlyPlayingActivity;
+import com.JordHan.Gloggr.Activities.GameListActivity;
+import com.JordHan.Gloggr.Activities.MainActivity;
+import com.JordHan.Gloggr.Activities.PreferencesActivity;
 
 public class MenuHelper {
 	// Pass in MenuItem

@@ -22,9 +22,12 @@
     <PreferenceCategory
         android:summary="Find out about application and developer"
         android:title="Application" >
-        <Preference android:title="About Developer" />
-        <Preference android:title="About App" />
-        <Preference android:title="Contact Details" />
+        <Preference
+            android:key="prefAboutApp"
+            android:title="About App" />
+        <Preference
+            android:key="prefAboutDeveloper"
+            android:title="About Developer" />
     </PreferenceCategory>
 
 </PreferenceScreen>

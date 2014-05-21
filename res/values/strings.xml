@@ -2,19 +2,20 @@
 
     <!-- Test Date -->
     <string name="username">Jordan</string>
-    
+
     <!-- Whole App -->
     <string name="app_name">Gloggr</string>
-    
+
     <!-- Activity titles -->
     <string name="currently_playing_title">Currently Playing</string>
     <string name="game_list_title">Game List</string>
     <string name="preferences_title">Preferences</string>
-    
+    <string name="about_app_title">About Gloggr</string>
+    <string name="about_developer_title">About Developer</string>
+
     <!-- Home Activity -->
     <string name="profilePictureContentDescription">Profile Picture</string>
     <string name="profileWelcomeMessage">\'s Game Statistics</string>
-    
     <string name="profileRatingTableHeader">Games by Rating</string>
     <string name="profileGoldContentDescription">Gold</string>
     <string name="profileSilverContentDescription">Silver</string>
@@ -22,5 +23,18 @@
     <string name="profileRedContentDescription">Red</string>
     <string name="profileCompletionTableHeader">Games by Completion Status</string>
     <string name="profileSystemTableHeader">Games by System</string>
+
+    <!-- About Activities -->
+    <string name="aboutDeveloperDescription">Name: Jordan Hancock\n
+        Twitter: @StuffFromJordan\n
+        Email: jordan.hancock.92\@gmail.com</string>
+    <string name="aboutAppDescription">
+        Android app which will one day assist with managing and organising your video game backlog (hopefully).\n\n
+        
+        It\'s very (literally very) early stages right now, but I am trying to add various bits and bobs on a daily basis.\n\n
+        
+        - Built to target Android 4.3 minimum\n
+        - Mainly tested on my own Nexus 7 device\n
+        - It will use the Giant Bomb API to provide game search feature, and also to automatically fill in game details</string>
 
 </resources>
