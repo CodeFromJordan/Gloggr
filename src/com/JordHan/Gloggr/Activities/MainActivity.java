@@ -9,11 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.JordHan.Gloggr.R;
+
 import com.JordHan.Gloggr.Helper.MenuHelper;
 import com.JordHan.Gloggr.db.DatabaseManager;
 
@@ -21,7 +22,8 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState); // Push instance of activity to super
+		super.onCreate(savedInstanceState); // Push instance of activity to
+											// super
 
 		// Setup interface
 		setContentView(R.layout.main_activity); // Load interface
@@ -29,6 +31,7 @@ public class MainActivity extends Activity {
 		// Get access to views
 		ImageView imgProfilePicture = (ImageView) findViewById(R.id.imgProfilePicture);
 		TextView txtWelcomeMessage = (TextView) findViewById(R.id.txtProfileWelcomeMessage);
+		Button btnSearchAdd = (Button) findViewById(R.id.btnSearchAdd);
 
 		// Get values from resources
 		String welcomeMessage = getString(R.string.profileWelcomeMessage);
@@ -40,6 +43,7 @@ public class MainActivity extends Activity {
 		txtWelcomeMessage.setText("* " + first_name + welcomeMessage + " *");
 
 		// Create listeners for controls
+		// Header image
 		imgProfilePicture.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -48,11 +52,20 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		// Search and Add new game button
+		btnSearchAdd.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast.makeText(getApplicationContext(), "btnSearchAdd clicked", Toast.LENGTH_SHORT).show();
+			}
+		});
+
 		DatabaseManager.init(this); // Create instance of DatabaseManager ready
 									// for ORM
 	}
-	
-	// Used to refresh activity on resume (mainly for refreshing after preference change)
+
+	// Used to refresh activity on resume (mainly for refreshing after
+	// preference change)
 	@Override
 	public void onResume() {
 		super.onResume();

@@ -23,6 +23,8 @@
     <string name="profileRedContentDescription">Red</string>
     <string name="profileCompletionTableHeader">Games by Completion Status</string>
     <string name="profileSystemTableHeader">Games by System</string>
+    <string name="btnSearchAddGame">Add New Game</string>
+    <string name="profileSearchableHint">Search games to add to your list</string>
 
     <!-- About Activities -->
     <string name="aboutDeveloperDescription">Name: Jordan Hancock\n
