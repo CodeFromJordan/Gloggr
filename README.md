@@ -10,3 +10,8 @@ Here is a few important facts about the application:
 - Mainly tested on my own Nexus 7 device
 - It will use the Giant Bomb API to provide game search feature, and also to automatically fill in game details
 
+Here is a few screenshots of the app so far, which will be updated as the app progresses:
+Home Activity - 
+![Home](screenshots/home_activity.png)
+Search Activity - 
+![Search Results](screenshots/search_results_activity.png)
