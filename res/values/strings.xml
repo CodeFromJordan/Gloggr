@@ -10,6 +10,7 @@
     <string name="currently_playing_title">Currently Playing</string>
     <string name="game_list_title">Game List</string>
     <string name="preferences_title">Preferences</string>
+    <string name="search_results_title">Search Results</string>
     <string name="about_app_title">About Gloggr</string>
     <string name="about_developer_title">About Developer</string>
 
@@ -24,7 +25,7 @@
     <string name="profileCompletionTableHeader">Games by Completion Status</string>
     <string name="profileSystemTableHeader">Games by System</string>
     <string name="btnSearchAddGame">Add New Game</string>
-    <string name="profileSearchableHint">Search games to add to your list</string>
+    <string name="profileSearchableHint">Search games to glog</string>
 
     <!-- About Activities -->
     <string name="aboutDeveloperDescription">Name: Jordan Hancock\n

@@ -22,8 +22,12 @@ public class GameSearchService extends AbstractService {
 
     // Create instance of service
     public GameSearchService(String query) {
-        //this.query = URLEncoder.encode(query);
-        this.query = query;
+    	String regularQuotes = "\"";
+    	String encodedQuotes = URLEncoder.encode(regularQuotes);
+    	
+    	//this.query = regularQuotes + query + regularQuotes;
+    	
+        this.query = encodedQuotes + query + encodedQuotes;
     }
 
     // Getters
@@ -36,7 +40,7 @@ public class GameSearchService extends AbstractService {
         String api_key = "549850873039c81f04c7277ec35a913728e3cf65";
         
         String url = "http://www.giantbomb.com/api/search/?api_key=" + api_key + 
-        		"&format=json&query=\"" + query + "\"&resources=game";
+        		"&format=json&query=" + query + "&resources=game";
 
         boolean error = false;
         HttpClient httpClient = null;

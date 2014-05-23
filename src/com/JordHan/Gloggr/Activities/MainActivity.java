@@ -13,8 +13,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.JordHan.Gloggr.R;
 
+import com.JordHan.Gloggr.R;
 import com.JordHan.Gloggr.Helper.MenuHelper;
 import com.JordHan.Gloggr.db.DatabaseManager;
 
@@ -56,7 +56,8 @@ public class MainActivity extends Activity {
 		btnSearchAdd.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Toast.makeText(getApplicationContext(), "btnSearchAdd clicked", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(getBaseContext(), SearchActivity.class);
+				startActivity(intent);
 			}
 		});
 
