@@ -37,10 +37,11 @@ public class GameSearchService extends AbstractService {
 
     // Main service, use HttpClient to download bytes and convert to JSONArray
     public void run() {
-        String api_key = "549850873039c81f04c7277ec35a913728e3cf65";
+        final String api_key = "549850873039c81f04c7277ec35a913728e3cf65";
+        final String field_list = "id,name,platforms";
         
         String url = "http://www.giantbomb.com/api/search/?api_key=" + api_key + 
-        		"&format=json&query=" + query + "&resources=game";
+        		"&format=json&query=" + query + "&resources=game&field_list=" + field_list;
 
         boolean error = false;
         HttpClient httpClient = null;

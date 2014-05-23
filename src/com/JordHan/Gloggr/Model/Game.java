@@ -62,4 +62,9 @@ public class Game {
     public String getNotes() {
     	return this.notes;
     }
+    
+    @Override
+    public String toString() {
+    	return this.title + " for " + this.system;
+    }
 }

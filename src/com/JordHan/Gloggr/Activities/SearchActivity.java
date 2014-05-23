@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.JordHan.Gloggr.R;
+import com.JordHan.Gloggr.Model.Game;
 import com.JordHan.Gloggr.Services.AbstractService;
 import com.JordHan.Gloggr.Services.GameSearchService;
 import com.JordHan.Gloggr.Services.IServiceListener;
@@ -25,7 +26,7 @@ import com.JordHan.Gloggr.Services.IServiceListener;
 public class SearchActivity extends ListActivity implements IServiceListener {
 
 	private Thread thread;
-	private ArrayList<JSONObject> searchResults;
+	private ArrayList<Game> searchResults;
 	public static final String GAME_SEARCH_CLICKED = "game_result_selected";
 
 	@Override
@@ -35,7 +36,7 @@ public class SearchActivity extends ListActivity implements IServiceListener {
 		super.setTitle(getString(R.string.search_results_title)); // Set title
 
 		// Set up objects
-		searchResults = new ArrayList<JSONObject>();
+		searchResults = new ArrayList<Game>();
 
 		// Used to handle new intents when activity created
 		handleIntent(getIntent());
@@ -112,15 +113,32 @@ public class SearchActivity extends ListActivity implements IServiceListener {
 
 			for (int resultCounter = 0; resultCounter < numberOfResults; resultCounter++) {
 				try {
-					JSONObject gameToAdd = initialResults
-							.getJSONObject(resultCounter); // Get individual result
-					
-					// Parse information
-					
-					// Map it to cells
-					
-				} catch (JSONException ex) {}
+					JSONObject gameToAddJSON = initialResults
+							.getJSONObject(resultCounter); // Get JSON of
+															// individual result
+
+					// Must add entry for each platform
+					for (int platformCounter = 0; platformCounter < gameToAddJSON
+							.getJSONArray("platforms").length(); platformCounter++) {
+						// Parse information to Game object
+						String id = gameToAddJSON.getString("id");
+						String title = gameToAddJSON.getString("name");
+						String system = gameToAddJSON.getJSONArray("platforms")
+								.getJSONObject(platformCounter).getString("name");
+						int percentageFinished = 0;
+						int rating = -1;
+						String notes = "";
+						searchResults.add(new Game(id, title, system,
+								percentageFinished, rating, notes));
+					}
+
+				} catch (JSONException ex) {
+				}
 			}
+
+			// Map array of games to list
+			setListAdapter(new ArrayAdapter<Game>(this,
+					R.layout.game_list_cell, R.id.text, searchResults));
 		}
 	}
 
